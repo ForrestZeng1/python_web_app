@@ -1,0 +1,35 @@
+<html>
+
+<head>
+    <title>Favorites</title>
+</head>
+
+<body style="font-family:Comic Sans MS;background-color:rgb(3, 208, 3)">
+    <header>
+        <h1>my favorite things</h1>
+
+        <nav>
+        </nav>
+    </header>
+    <main>
+        <ol>
+            <li>food:{{food}}</li>
+            <li>color:{{color}}</li>
+            <li>animal:{{animal}}</li>
+            <li>meme:{{meme}}</li>
+            <li>game:{{game}}</li>
+        </ol>
+        {%if admin%}
+        <h1>hello admin</h1>
+        {%elif member%}
+        <h1>hello member</h1>
+        {%else%}
+        <h1>You are not authorized</h1>
+        {%endif%}
+        <a href="about/">Click!</a>
+    </main>
+    <footer>
+    </footer>
+</body>
+
+</html>

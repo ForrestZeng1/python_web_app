@@ -1,0 +1,12 @@
+{% extends 'firstApp/base.html' %}
+{% block main %}
+<table border=1px>
+    <ol>
+        {% for each in websites %}
+        <li>
+            <a href='{{each.1}}'>{{each.0}}</a>
+        </li>
+        {% endfor %}
+    </ol>
+</table>
+{% endblock %}

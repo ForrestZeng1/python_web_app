@@ -1,0 +1,31 @@
+{% extends 'firstApp/base.html' %}
+{% block main %}
+<form action='../premiumtab/' method='POST'>
+    {% csrf_token %}
+    <h2>Sign up!</h2>
+    <label class="Red">Firstname:</label>
+    <input type="text" name="firstname">
+    <br>
+    <label class="Red">Lastname:</label>
+    <input type="text" name="lastname">
+    <br>
+    <label class="Red">Yeename:</label>
+    <input type="text" name="yeename">
+    <br>
+    <label class="Blue">Yeepassword:</label>
+    <input type="password" name="yeepassword">
+    <br>
+    <label class="Blue">Confirm Yeepassword:</label>
+    <input type="password" name="yeepasswordconf">
+    <br>
+    <label>Yeegender</label>
+    <br>
+    <input type="radio" , name="gender">
+    <label>Heyee</label>
+    <br>
+    <input type="radio" , name="gender">
+    <label>Sheyee</label>
+    <br>
+    <button type="submit"> Submit</button>
+</form>
+{% endblock %}

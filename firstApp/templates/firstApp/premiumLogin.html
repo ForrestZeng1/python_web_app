@@ -1,0 +1,13 @@
+{% extends 'firstApp/base.html' %}
+{% block main %}
+<form action=" ../premiumtab/" method="POST">
+    {% csrf_token %}
+    <label>Yeename:</label>
+    <input type="text" name='logyeename'>
+    <br>
+    <label>Yeepassword:</label>
+    <input type="password" name='logyeepassword'>
+    <br>
+    <button type="submit">Log in</button>
+</form>
+{% endblock %}

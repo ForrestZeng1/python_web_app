@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+
+<head>
+    <title>{% block title %}YEELAND {% endblock %}</title>
+</head>
+
+<body style="background-color:rgb(3, 208, 3)">
+    <header>
+        {% block header %}
+        <h1>WELCOME TO YEELAND!!!!!!!!!!</h1>
+        <h2>YEE PICTURES</h2>
+        <nav>
+            <a href="/firstApp/">Home</a>
+            <a href="/firstApp/archive/">Archive</a>
+            <a href="/firstApp/about/">About the Yee team</a>
+            <a href="/firstApp/premium/">Get Premium</a>
+            <a href="/firstApp/contact/">Contact</a>
+            <a href="/firstApp/coolWebsites/">Cool websites!</a>
+            <a href="/firstApp/premiumLogin/">Premium login</a>
+        </nav>
+        {% endblock %}
+    </header>
+    <main>{% block main %} {% endblock %}</main>
+    <footer>{% block footer %} {% endblock %}</footer>
+</body>

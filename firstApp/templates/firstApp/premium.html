@@ -1,0 +1,37 @@
+{% extends 'firstApp/base.html' %}
+{% block main %}
+<h2>GET PREMIUM</h2>
+<p>Yeeland Plans:</p>
+<table border="1px">
+    <tr>
+        <th>Plan</th>
+        <th>Basic</th>
+        <th>Premium</th>
+    </tr>
+    {% for each in functions %}
+    <tr>
+        {% for every in each %}
+        <td>{{every}}</td>
+        {% endfor %}
+    </tr>
+    {% endfor %}
+    <tr>
+        <th>Anything else?</th>
+        <td style="text-align:center" colspan="2">No.</td>
+
+    </tr>
+</table>
+<p>These are our users!</p>
+<ol>
+    {% for each in users %}
+    <li>{{each}}</li>
+    {% endfor %}
+</ol>
+<h3>Premium gives you:</h3>
+<ol>
+    <li>Access to the Archive</li>
+    <li>Access to color picker, date picker, and more!</li>
+</ol>
+<a href="/firstApp/getpremium">Click now to create a yee account and get premium automatically!</a><br>
+<img src=https://banner2.kisspng.com/20180420/ufq/kisspng-minecraft-mods-minecraft-mods-yee-video-game-animals-dinosaur-5ada6fe302df55.9831191515242649310118.jpg
+    {% endblock %}

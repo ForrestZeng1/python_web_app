@@ -1,0 +1,40 @@
+{% extends 'firstApp/base.html' %}
+{% block main %}
+{% if authorized %}
+<h1>Hello {{ yeename }}</h1>
+<form>
+    <label>Color picker:</label>
+    <input type="color" name="color">
+    <br>
+    <label>Date picker:</label>
+    <input type="date" name="date">
+    <br>
+    <label>Image picker:</label>
+    <input type="image" name="image">
+    <br>
+    <label>Number picker:</label>
+    <input type="number" name="number">
+    <br>
+    <label>Pick from range:</label>
+    <input type="range" name="date" min="0" , max="10">
+    <br>
+    <label>Select your mode of transport</label>
+    <br>
+    <input type="checkbox" name="vehicle1" value="yeecar">
+    <label>I own a yeecar</label>
+    <br>
+    <input type="checkbox" name="vehicle2" value="yeehoverboard">
+    <label>I own a yeehoverboard</label>
+    <br>
+    <label>What brand?(car or hoverboard doesn't matter)</label>
+    <br>
+    <select name="yeebrand">
+        <option value="yeeford">Yeeford</option>
+        <option value="yeetoyato">Yeetoyota</option>
+        <option value="yeehonda" selected>Yeehonda</option>
+    </select>
+</form>
+{% else %}
+<h1>401 not authorized</h1>
+{% endif %}
+{% endblock %}
