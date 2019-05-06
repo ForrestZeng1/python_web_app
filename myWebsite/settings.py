@@ -26,7 +26,7 @@ SECRET_KEY = '=94e^wst00l4x$+s10e_kzw_fvjch=$ls&jq(oln3$o64x)+e3'
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    'limitless-tundra-19605.herokuapp.com/'
+    'limitless-tundra-19605.herokuapp.com'
 ]
 
 
