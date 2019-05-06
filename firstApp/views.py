@@ -61,20 +61,19 @@ def premiumtab(request):
     signupyeename = request.POST.get('yeename')
     signupyeepassword = request.POST.get('yeepassword')
     signupyeepassword2 = request.POST.get('yeepasswordconf')
-    logyeename = request.POST.get('logyeename')
-    logyeepassword = request.POST.get('logyeepassword')
+    # logyeename = request.POST.get('logyeename')
+    # logyeepassword = request.POST.get('logyeepassword')
     if signupyeepassword == signupyeepassword2 and len(signupfirstname) <= 20 and len(signuplastname) <= 20 and len(signupyeename) <= 10 and len(signupyeename) > 5 and len(signupyeepassword) <= 10 and len(signupyeepassword) > 5:
         credentials = loginCredential(
             firstname=signupfirstname, lastname=signuplastname, username=signupyeename, password=signupyeepassword)
-        credentials.save(
-        )
+        credentials.save()
         credentials.id()
         authorized = True
 
     for each in loginCredentials:
         if signupyeename == each.username:
             authorized = False
-        if each.username == logyeename and each.password == logyeepassword:
-            authorized = True
+        # if each.username == logyeename and each.password == logyeepassword:
+        #     authorized = True
     data_dict['authorized'] = authorized
     return render(request, 'firstApp/premiumtab.html', data_dict)
