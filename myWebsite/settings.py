@@ -26,7 +26,8 @@ SECRET_KEY = '=94e^wst00l4x$+s10e_kzw_fvjch=$ls&jq(oln3$o64x)+e3'
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    'yeeland.herokuapp.com'
+    'yeeland.herokuapp.com',
+    '127.0.0.1:8000'
 ]
 
 
